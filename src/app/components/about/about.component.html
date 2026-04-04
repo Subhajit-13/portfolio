@@ -1,0 +1,84 @@
+<section id="about" class="section" *ngIf="personal">
+  <div class="container">
+
+    <div class="about-grid">
+
+      <!-- Text side -->
+      <div class="about-text">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Who I Am</h2>
+
+        <p class="about-bio">{{ personal.bio }}</p>
+
+        <p class="about-extra">
+          I believe in learning by building. Every project teaches me something new — whether it's
+          optimising an Angular change detection cycle or debugging a Flask route at midnight.
+          I'm actively growing my full-stack capabilities and looking for chances to contribute
+          to meaningful products.
+        </p>
+
+        <div class="about-facts">
+          <div class="fact-card" *ngFor="let fact of facts">
+            <span class="fact-icon">{{ fact.icon }}</span>
+            <div>
+              <span class="fact-label">{{ fact.label }}</span>
+              <span class="fact-value">{{ getValue(fact) }}</span>
+            </div>
+          </div>
+        </div>
+
+        <a [href]="'mailto:' + personal.email" class="btn btn-primary" style="width: fit-content; margin-top: 8px;">
+          Say Hello
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Visual side -->
+      <div class="about-visual">
+        <div class="about-card-main card">
+          <div class="about-avatar-sm">
+            <span>{{ personal.avatarInitials }}</span>
+          </div>
+          <h3>{{ personal.name }}</h3>
+          <p>{{ personal.title }}</p>
+          <div class="about-card-divider"></div>
+          <div class="about-card-stat">
+            <div class="stat">
+              <strong>1 yr</strong>
+              <span>Angular</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>3 mo</strong>
+              <span>Flask</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>∞</strong>
+              <span>Curiosity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating accent cards -->
+        <div class="float-card float-card-1 card">
+          <span class="float-icon">🅰️</span>
+          <div>
+            <strong>Angular 17</strong>
+            <p>Standalone APIs</p>
+          </div>
+        </div>
+        <div class="float-card float-card-2 card">
+          <span class="float-icon">🐍</span>
+          <div>
+            <strong>Python Flask</strong>
+            <p>REST APIs</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

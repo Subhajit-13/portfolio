@@ -1,0 +1,26 @@
+<section id="achievements" class="section achievements-section">
+  <div class="container">
+
+    <div class="achievements-inner">
+
+      <div class="achievements-text">
+        <p class="section-label">Achievements</p>
+        <h2 class="section-title">By The Numbers</h2>
+        <p class="section-subtitle">
+          Small steps add up. Here's a snapshot of where I am in my journey as a developer.
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card card" *ngFor="let a of achievements">
+          <span class="achievement-icon">{{ a.icon }}</span>
+          <strong class="achievement-value">{{ a.value }}</strong>
+          <span class="achievement-title">{{ a.title }}</span>
+          <p class="achievement-desc">{{ a.description }}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

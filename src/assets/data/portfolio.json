@@ -1,0 +1,128 @@
+{
+  "personal": {
+    "name": "Subhajit Biswas",
+    "title": "Full Stack Developer",
+    "tagline": "Building interfaces by day, architecting backends by night.",
+    "bio": "I'm a full-stack developer with a year of crafting dynamic Angular applications and a growing passion for Python Flask backends. I love the complete picture — from pixel-perfect UIs to clean, scalable APIs.",
+    "email": "subhajit.biswas.dev@gmail.com",
+    "github": "https://github.com/Subhajit-13",
+    "linkedin": "https://www.linkedin.com/in/subhajit-biswas-263173222/",
+    "location": "Kolkata, India",
+    "resumeUrl": "/assets/resume.pdf",
+    "avatarInitials": "SB"
+  },
+  "skills": {
+    "frontend": [
+      { "name": "Angular", "level": 85, "years": 1 },
+      { "name": "TypeScript", "level": 80, "years": 1 },
+      { "name": "HTML5 / CSS3", "level": 85, "years": 1 },
+      { "name": "RxJS", "level": 70, "years": 1 }
+    ],
+    "backend": [
+      { "name": "Python", "level": 70, "years": 0.25 },
+      { "name": "Flask", "level": 60, "years": 0.25 },
+      { "name": "REST APIs", "level": 65, "years": 0.25 },
+      { "name": "SQL", "level": 55, "years": 0.25 }
+    ],
+    "tools": [
+      { "name": "Git & GitHub", "level": 80, "years": 1 },
+      { "name": "VS Code", "level": 90, "years": 1 },
+      { "name": "Postman", "level": 70, "years": 0.5 }
+    ]
+  },
+  "journey": [
+    {
+      "date": "Early 2024",
+      "title": "Started Angular",
+      "description": "Joined my current role and dove deep into Angular — components, services, RxJS, routing. Frontend became my craft.",
+      "type": "milestone"
+    },
+    {
+      "date": "Mid 2024",
+      "title": "First Production Deployment",
+      "description": "Shipped a feature-complete Angular module used by real users. Learned the full SDLC in a professional setting.",
+      "type": "achievement"
+    },
+    {
+      "date": "Late 2024",
+      "title": "Ventured into Backend",
+      "description": "Curiosity led me to Python and Flask. Started building REST APIs, understanding the server side of every request.",
+      "type": "milestone"
+    },
+    {
+      "date": "Early 2025",
+      "title": "Full Stack Mindset",
+      "description": "Connected the dots — Angular consuming Flask APIs I built myself. The complete picture clicked.",
+      "type": "achievement"
+    }
+  ],
+  "experience": [
+    {
+      "company": "TCS",
+      "role": "Software Developer",
+      "period": "2024 – Present",
+      "location": "Kolkata",
+      "type": "full-time",
+      "description": "Working on Angular-based frontend applications and contributing to Python Flask backends. Involved in the full development lifecycle from requirements to deployment.",
+      "highlights": [
+        "Built and maintained Angular modules consumed by production users",
+        "Developed REST APIs with Python Flask for internal services",
+        "Collaborated with cross-functional teams using Agile methodology",
+        "Improved page load performance by optimizing component rendering"
+      ],
+      "tech": ["Angular", "TypeScript", "Python", "Flask", "Git"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "This very portfolio — built with Angular 17, driven by a single JSON data file so content updates never require touching HTML.",
+      "tech": ["Angular", "TypeScript", "CSS3"],
+      "github": "https://github.com/yourusername/portfolio",
+      "live": "",
+      "status": "live",
+      "featured": true
+    },
+    {
+      "title": "Flask REST API",
+      "description": "A RESTful API built with Python Flask featuring JWT authentication, SQLite persistence, and Postman-tested endpoints.",
+      "tech": ["Python", "Flask", "SQLite", "REST"],
+      "github": "https://github.com/Subhajit-13/rest-apis-project",
+      "live": "",
+      "status": "in-progress",
+      "featured": true
+    }
+  ],
+  "achievements": [
+    {
+      "icon": "🚀",
+      "title": "Production Deployments",
+      "value": "3+",
+      "description": "Features shipped to real users"
+    },
+    {
+      "icon": "⚡",
+      "title": "Angular Experience",
+      "value": "1 Year",
+      "description": "Professional frontend development"
+    },
+    {
+      "icon": "🐍",
+      "title": "Flask Journey",
+      "value": "3 Months",
+      "description": "Backend & API development"
+    },
+    {
+      "icon": "🔧",
+      "title": "Projects Built",
+      "value": "5+",
+      "description": "Personal & professional work"
+    },
+    {
+      "icon": "🥇",
+      "title": "TCS AI Hackathon Warrior",
+      "value": "Winner",
+      "description": "Recognisation for innovative AI solution"
+    }
+  ]
+}

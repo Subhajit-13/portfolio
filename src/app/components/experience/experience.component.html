@@ -1,0 +1,52 @@
+<section id="experience" class="section">
+  <div class="container">
+
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Where I've Worked</h2>
+    <p class="section-subtitle" style="margin-bottom: 56px;">
+      Professional experience building real-world products with real teams.
+    </p>
+
+    <div class="experience-list">
+
+      <div class="exp-card card" *ngFor="let exp of experiences">
+
+        <div class="exp-header">
+          <div class="exp-company-block">
+            <div class="exp-company-icon">
+              {{ exp.company.charAt(0) }}
+            </div>
+            <div>
+              <h3 class="exp-company">{{ exp.company }}</h3>
+              <span class="exp-location">📍 {{ exp.location }}</span>
+            </div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-role">{{ exp.role }}</span>
+            <span class="exp-period">{{ exp.period }}</span>
+            <span class="exp-type-badge">{{ exp.type }}</span>
+          </div>
+        </div>
+
+        <p class="exp-description">{{ exp.description }}</p>
+
+        <div class="exp-highlights">
+          <h4>Key Highlights</h4>
+          <ul>
+            <li *ngFor="let h of exp.highlights">
+              <span class="highlight-arrow">→</span>
+              {{ h }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-tech">
+          <span class="tag" *ngFor="let t of exp.tech">{{ t }}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

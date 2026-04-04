@@ -1,0 +1,35 @@
+<section id="journey" class="section">
+  <div class="container">
+
+    <div class="journey-header">
+      <p class="section-label">My Journey</p>
+      <h2 class="section-title">The Story So Far</h2>
+      <p class="section-subtitle">From zero to full-stack — one commit at a time.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div
+        class="timeline-item"
+        *ngFor="let item of journey; let i = index"
+        [class.right]="i % 2 !== 0">
+
+        <div class="timeline-dot" [class.achievement]="item.type === 'achievement'">
+          <span>{{ item.type === 'achievement' ? '🏆' : '🚀' }}</span>
+        </div>
+
+        <div class="timeline-card card">
+          <span class="timeline-date">{{ item.date }}</span>
+          <h3 class="timeline-title">{{ item.title }}</h3>
+          <p class="timeline-desc">{{ item.description }}</p>
+          <span class="timeline-badge" [class.achievement]="item.type === 'achievement'">
+            {{ item.type === 'achievement' ? 'Achievement' : 'Milestone' }}
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

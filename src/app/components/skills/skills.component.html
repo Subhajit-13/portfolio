@@ -1,0 +1,45 @@
+<section id="skills" class="section" *ngIf="skills">
+  <div class="container">
+
+    <div class="skills-header">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">My Tech Stack</h2>
+      <p class="section-subtitle">
+        A year of Angular sharpened my frontend instincts. Three months of Flask opened up the backend.
+        Here's where I stand today.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-category card" *ngFor="let cat of categories">
+
+        <div class="cat-header">
+          <span class="cat-icon">{{ cat.icon }}</span>
+          <h3 class="cat-title">{{ cat.label }}</h3>
+        </div>
+
+        <div class="skill-list">
+          <div class="skill-item" *ngFor="let skill of getSkills(cat.key)">
+            <div class="skill-meta">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-level-label">{{ levelLabel(skill.level) }}</span>
+            </div>
+            <div class="skill-bar-track">
+              <div
+                class="skill-bar-fill"
+                [style.width.%]="skill.level"
+                [style.background]="cat.color">
+              </div>
+            </div>
+            <div class="skill-footer">
+              <span class="skill-years">{{ skill.years < 1 ? (skill.years * 12 | number:'1.0-0') + ' months' : skill.years + ' year' + (skill.years > 1 ? 's' : '') }}</span>
+              <span class="skill-percent">{{ skill.level }}%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
