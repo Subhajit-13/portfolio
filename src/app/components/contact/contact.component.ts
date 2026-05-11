@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { PortfolioService } from '../../services/portfolio.service';
 import { PersonalInfo } from '../../models/portfolio.model';
 
+declare const emailjs: any;
+
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -23,6 +25,12 @@ export class ContactComponent implements OnInit {
 
   submitted = false;
   sending = false;
+  error = false;
+
+  // ✏️ Replace these three values with yours from EmailJS dashboard
+  private SERVICE_ID  = 'service_eno7uo8';
+  private TEMPLATE_ID = 'template_iv38h4a';
+  private PUBLIC_KEY  = 'JwsU9-NEYZ6mSMv5k';
 
   contactLinks: { icon: string; label: string; value: string; href: string }[] = [];
 
@@ -52,16 +60,33 @@ export class ContactComponent implements OnInit {
         }
       ];
     });
+
+    // Initialize EmailJS with your public key
+    emailjs.init(this.PUBLIC_KEY);
   }
 
   onSubmit(): void {
     if (!this.form.name || !this.form.email || !this.form.message) return;
-    // Wire this up to your Flask backend or EmailJS later
+
     this.sending = true;
-    setTimeout(() => {
-      this.sending = false;
-      this.submitted = true;
-      this.form = { name: '', email: '', subject: '', message: '' };
-    }, 1200);
+    this.error = false;
+
+    const templateParams = {
+      from_name:  this.form.name,
+      from_email: this.form.email,
+      subject:    this.form.subject || 'No subject',
+      message:    this.form.message
+    };
+
+    emailjs.send(this.SERVICE_ID, this.TEMPLATE_ID, templateParams)
+      .then(() => {
+        this.sending   = false;
+        this.submitted = true;
+        this.form = { name: '', email: '', subject: '', message: '' };
+      })
+      .catch(() => {
+        this.sending = false;
+        this.error   = true;
+      });
   }
 }

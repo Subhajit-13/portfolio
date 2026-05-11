@@ -113,6 +113,9 @@
             </textarea>
           </div>
 
+          <div class="form-error" *ngIf="error">
+            ⚠️ Something went wrong. Please try emailing me directly.
+          </div>
           <button
             type="submit"
             class="btn btn-primary submit-btn"
